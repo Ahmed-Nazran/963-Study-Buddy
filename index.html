@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STUDY BUDDY 963</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&amp;display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="icon" href="" type="image/x-icon">
+
+</head>
+
+<body>
+  <div class="banner">
+    <div class="navbar">
+      <img src="" class="logo" alt="study_buddy_logo">
+      <ul>
+        <li><a href="#Home" onclick="huma()">Home</a></li>
+        <li><a href="#About" onclick="us()">About</a></li>
+        <li><a href="#Contact" onclick="conta()">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <div id="home">
+        <h1>STUDY BUDDY 963</h1><br>
+        <p></p>
+        <div>
+          <a href="#"><button type="button"><span></span>Start Learning</button></a>
+        </div>
+      </div>
+
+      <div id="contact" style="display: none;">
+        <h1>Contact</h1><br>
+      </div>
+
+      <div id="about" style="display: none;">
+        <h1>About</h1><br>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+
+  .banner {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(#1691b7bf, #0b0a85bf);
+    background-size: cover;
+    background-position: center;
+    color: black;
+  }
+
+  .navbar {
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    width: 10%;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+
+  .navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+  }
+
+  .navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  .navbar ul li a::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #000;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+  }
+
+  .navbar ul li a:hover:after {
+    width: 100%;
+  }
+
+  .content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+  }
+
+  button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font: bold;
+    border: 2px solid #a9e7f5;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+
+  span {
+    background: #a9e7f5;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 00.5s;
+  }
+
+  button:hover span {
+    width: 100%;
+  }
+
+  button:hover {
+    border: none;
+    color: #000;
+  }
+
+  @media (max-width: 1000px) {
+    .logo {
+      width: 15%;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+
+    .navbar ul li {
+      list-style: none;
+      display: inline-block;
+      margin: 0 10px;
+      position: relative;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: #fff;
+      text-transform: uppercase;
+    }
+  }
+
+  #contact ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    box-shadow: inset 0 0 5px rgb(62, 138, 135);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(92, 126, 139);
+  }
+
+  #contact p {
+    color: white;
+    font-size: 20px;
+  }
+</style>
+
+<script>
+
+
+  function conta() {
+    home = document.getElementById("home");
+    home.style.display = "none";
+    abu = document.getElementById("about");
+    abu.style.display = "none";
+    con = document.getElementById("contact");
+    con.style.display = "block";
+
+  }
+
+  function huma() {
+    home = document.getElementById("home");
+    home.style.display = "block";
+    abu = document.getElementById("about");
+    abu.style.display = "none";
+    con = document.getElementById("contact");
+    con.style.display = "none";
+
+  }
+
+  function us() {
+    home = document.getElementById("home");
+    home.style.display = "none";
+    abu = document.getElementById("about");
+    abu.style.display = "block";
+    con = document.getElementById("contact");
+    con.style.display = "none";
+
+  }
+
+
+</script>
