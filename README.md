@@ -1,1 +1,1 @@
-# 963-Study-Buddy
+# Study-Buddy-963
